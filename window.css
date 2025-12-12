@@ -1,0 +1,31 @@
+
+/*@theme_selected_bg_color;=orange   
+@theme_bg_color= semi clair       
+
+@bg_color = base_color=fond fonce     
+@borders=noir complet
+@insensitive_fg_color clair fort
+@theme_selected_fg_color carrement blanc
+@unfocused_insensitive_color  button color
+
+
+*/
+
+.window_title_bar button {
+
+background-color: @base_color;
+margin-left:1px;
+margin-right:1px;
+border:0px solid red;
+}
+
+
+
+.window_title_bar button >image
+{     padding: 3px;
+    margin:0px;
+    background-color:shade(@unfocused_insensitive_color, 0.75) ;
+    border:1px solid @unfocused_insensitive_color;
+    border-radius: 16px;
+    -gtk-icon-shadow:none;
+}

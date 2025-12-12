@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="action-costrain-symetric-symbolic.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="5.656854"
+     inkscape:cx="2.9168156"
+     inkscape:cy="66.644817"
+     inkscape:window-width="1996"
+     inkscape:window-height="1224"
+     inkscape:window-x="919"
+     inkscape:window-y="739"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g1515"
+     showgrid="true"><inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999997"
+       spacingy="0.99999997"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" /></sodipodi:namedview><defs
+     id="defs1"><rect
+       x="15.114408"
+       y="5.3033011"
+       width="16.705398"
+       height="24.395185"
+       id="rect1431" /><rect
+       x="9.6343303"
+       y="4.5078059"
+       width="21.655146"
+       height="31.1127"
+       id="rect1425" /><rect
+       x="7.6897866"
+       y="5.3033011"
+       width="22.185476"
+       height="37.565049"
+       id="rect1401" /><rect
+       x="15.644738"
+       y="8.04334"
+       width="18.208"
+       height="22.980971"
+       id="rect1365" /></defs><g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"><g
+       style="fill:#000000"
+       id="g1070"
+       transform="matrix(0.24133744,0,0,0.28178882,-1.438691,-2.8704004)"><g
+         id="SVGRepo_bgCarrier"
+         stroke-width="0" /><g
+         id="SVGRepo_tracerCarrier"
+         stroke-linecap="round"
+         stroke-linejoin="round" /><g
+         id="SVGRepo_iconCarrier">  </g></g><text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text1363"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect1365);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.53071;stroke-dasharray:none;stroke-dashoffset:1.49624;stroke-opacity:1" /><text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text1399"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:17.3333px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect1401);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.53071;stroke-dasharray:none;stroke-dashoffset:1.49624;stroke-opacity:1" /><g
+       id="g1515"
+       transform="matrix(0.21796993,0,0,0.21796993,0.96778703,1.2758494)">
+	<g
+   id="g1511"
+   transform="matrix(0.72809408,0,0,0.72809408,2.1187773,4.3432853)"
+   style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.10013794;stroke-dasharray:none;stroke-opacity:1">
+		<polygon
+   style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.10013794;stroke-dasharray:none;stroke-opacity:1"
+   points="1.5,59.001 27.5,59.001 27.5,1.001 "
+   id="polygon1507" />
+		<path
+   style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:3.10013794;stroke-dasharray:none;stroke-opacity:1"
+   d="M 27.5,60.001 H 1.5 C 1.161,60.001 0.845,59.829 0.661,59.545 0.477,59.26 0.449,58.901 0.588,58.592 l 26,-58 c 0.193,-0.431 0.662,-0.67 1.122,-0.568 0.461,0.098 0.79,0.505 0.79,0.977 v 58 c 0,0.552 -0.447,1 -1,1 z m -24.456,-2 H 26.5 V 5.677 Z"
+   id="path1509" />
+	</g>
+	<polygon
+   style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:4.61299735;stroke-dasharray:none;stroke-opacity:1"
+   points="33.5,1.001 33.5,59.001 59.5,59.001 "
+   id="polygon1513"
+   transform="matrix(0.75385777,0,0,0.75385777,19.035254,2.885114)" />
+<path
+   style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:5.06951;stroke-dasharray:5.06951, 5.06951;stroke-dashoffset:0;stroke-opacity:1"
+   d="M 32.68248,-3.4929385 V 67.318733"
+   id="path1590" /></g></g></svg>

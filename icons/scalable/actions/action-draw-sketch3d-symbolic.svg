@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="action-draw-sketch3d-symbolic.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="6.62"
+     inkscape:cx="50.226586"
+     inkscape:cy="6.6465257"
+     inkscape:window-width="1996"
+     inkscape:window-height="1224"
+     inkscape:window-x="837"
+     inkscape:window-y="445"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="g2749"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999997"
+       spacingy="0.99999997"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <rect
+       x="3.9274924"
+       y="3.776435"
+       width="36.555891"
+       height="29.154079"
+       id="rect455" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g2749"
+       style="clip-rule:evenodd;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:2.35331;stroke-dasharray:none;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+       transform="matrix(0.29836322,0,0,0.2931663,-2.8639607,-1.9738297)">
+      <path
+         style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.35331;stroke-dasharray:none;stroke-opacity:1"
+         fill="#414141"
+         d="M 17.088808,53.908989 16.5,53.5 24,38.5 c 7.9692,-8.9701 16.3025,-17.6368 25,-26 l 8.5,8.5 c -7.9692,8.9701 -16.3025,17.6368 -25,26 -4.4811,2.0902 -9.752086,4.2569 -15.411192,6.908989 z"
+         id="path2747"
+         sodipodi:nodetypes="ccccccc" />
+      <text
+         xml:space="preserve"
+         transform="matrix(0.88678267,0,0,0.90250255,8.3933109,3.8698753)"
+         id="text453"
+         style="font-weight:bold;font-size:18.6667px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect455);fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.85953;letter-spacing:-1.54px"><tspan
+           x="3.9277344"
+           y="20.761711"
+           id="tspan413">3D</tspan></text>
+    </g>
+    <g
+       id="g2753"
+       style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+       transform="matrix(0.29836322,0,0,0.2931663,-3.0510494,-1.6464245)" />
+    <g
+       id="g2761"
+       transform="matrix(0.29569852,0,0,0.19134119,-3.1195623,3.7804345)"
+       style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision">
+      <path
+         style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:4.07434;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 13.710011,55.442679 C 59.64143,55.283137 59.64143,55.283137 59.64143,55.283137"
+         id="path3209" />
+    </g>
+    <path
+       style="clip-rule:evenodd;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.395999;stroke-dasharray:none;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+       d="M 3.6119831,10.0706 5.576414,12.081804"
+       id="path927"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

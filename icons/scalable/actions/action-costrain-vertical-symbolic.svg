@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="action-costrain-vertical-symbolic.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="9.3620938"
+     inkscape:cx="33.699726"
+     inkscape:cy="25.208036"
+     inkscape:window-width="1996"
+     inkscape:window-height="1224"
+     inkscape:window-x="1794"
+     inkscape:window-y="433"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999997"
+       spacingy="0.99999997"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <rect
+       x="30.441908"
+       y="12.06995"
+       width="21.255929"
+       height="35.355339"
+       id="rect2651" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:1.18445;stroke-dasharray:none;stroke-dashoffset:0.39588"
+       d="M 6.0570313,13.049143 6.038729,2.6357832"
+       id="path355" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.35464683,0,0,0.33540625,-1.4559407,0.33360661)"
+       id="text2649"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.3658px;font-family:sans-serif;-inkscape-font-specification:sans-serif;white-space:pre;shape-inside:url(#rect2651);fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1.50803;stroke-dasharray:none;stroke-dashoffset:1.49624;stroke-opacity:0"><tspan
+         x="30.441406"
+         y="26.961149"
+         id="tspan544">V</tspan></text>
+  </g>
+</svg>

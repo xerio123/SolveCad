@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="action-draw-point-symbolic.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="6.62"
+     inkscape:cx="8.836858"
+     inkscape:cy="18.58006"
+     inkscape:window-width="1996"
+     inkscape:window-height="1224"
+     inkscape:window-x="822"
+     inkscape:window-y="544"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999997"
+       spacingy="0.99999997"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:none;fill-opacity:0.944223;stroke:#000000;stroke-width:1.03;stroke-dasharray:none;stroke-opacity:1"
+       id="path1-6"
+       cx="8.2643938"
+       cy="7.9445863"
+       rx="3.3783386"
+       ry="3.2984545" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.596412;stroke-dasharray:1.19283, 0.596412;stroke-dashoffset:0.954259"
+       d="m 1.4810905,8.0534951 c 13.3891065,0 13.3891065,-0.039996 13.3891065,-0.039996"
+       id="path300-3" />
+    <path
+       style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.596412;stroke-dasharray:1.19283, 0.596412;stroke-dashoffset:0.954259"
+       d="m 8.2532847,1.2337516 c 0,13.3891074 0.039996,13.3891074 0.039996,13.3891074"
+       id="path300-3-3" />
+  </g>
+</svg>

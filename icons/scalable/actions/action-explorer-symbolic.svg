@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="action-explorer-symbolic.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="8.7398398"
+     inkscape:cx="24.82883"
+     inkscape:cy="32.494875"
+     inkscape:window-width="1996"
+     inkscape:window-height="1224"
+     inkscape:window-x="1715"
+     inkscape:window-y="367"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showgrid="true"><inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999997"
+       spacingy="0.99999997"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" /></sodipodi:namedview><defs
+     id="defs1" /><g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"><g
+       style="fill:#000000"
+       id="g1"
+       transform="matrix(1.2047416,0,0,1.0081374,0.64838273,-1.1932163)"><path
+         d="m 10.05,3.828 a 1.112,1.112 0 0 1 1.11,1.108 v 10.562 a 1.112,1.112 0 0 1 -1.11,1.108 H 1.95 A 1.112,1.112 0 0 1 0.84,15.498 V 4.936 A 1.112,1.112 0 0 1 1.95,3.828 H 2.365 V 4.936 H 1.951 L 1.949,4.938 v 10.558 l 0.002,0.002 h 8.098 l 0.002,-0.002 V 4.938 L 10.049,4.936 H 9.635 V 3.828 h 0.416 z M 9.07,7.904 H 2.82 v 1.108 h 6.25 z m 0,2.337 H 2.82 v 1.108 h 6.25 z m 0,2.337 H 2.82 v 1.108 H 9.07 Z M 8.527,3.643 v 1.25 A 0.476,0.476 0 0 1 8.052,5.369 H 3.948 A 0.476,0.476 0 0 1 3.473,4.894 V 3.644 A 0.476,0.476 0 0 1 3.948,3.168 H 4.645 V 1.87 A 0.476,0.476 0 0 1 5.12,1.395 H 6.88 A 0.476,0.476 0 0 1 7.355,1.87 v 1.3 H 8.052 A 0.476,0.476 0 0 1 8.527,3.644 Z M 6.55,2.67 A 0.554,0.554 0 1 0 5.996,3.224 0.554,0.554 0 0 0 6.55,2.67 Z"
+         id="path1" /></g></g></svg>

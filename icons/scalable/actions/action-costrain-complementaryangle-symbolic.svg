@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="action-costrain-complementaryangle-symbolic.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="9.3620938"
+     inkscape:cx="33.592913"
+     inkscape:cy="25.208036"
+     inkscape:window-width="1996"
+     inkscape:window-height="1224"
+     inkscape:window-x="1377"
+     inkscape:window-y="614"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999997"
+       spacingy="0.99999997"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.75294;stroke-dasharray:none;stroke-opacity:1"
+       d="M 11.321751,15.651044 4.5892406,0.79974528"
+       id="path2"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.75294;stroke-dasharray:none;stroke-opacity:1"
+       d="M 15.462761,11.268139 0.75912682,4.2189584"
+       id="path2-3"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;stroke-width:0.492001"
+       d="M 2.7695906,5.1717863 5.5674421,3.1652464"
+       id="path404" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.492001;stroke-opacity:1"
+       d="m 2.3739347,4.8891751 c 0,0 0.6500061,-2.2043679 3.0804629,-2.2891513"
+       id="path469"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-dasharray:none;stroke-opacity:1"
+       d="m 6.2894222,4.573031 c 0,0 4.5052948,-0.2476887 4.5997108,4.5997115"
+       id="path471"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

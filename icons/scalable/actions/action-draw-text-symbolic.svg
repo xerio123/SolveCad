@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="action-draw-text-symbolic.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="4.6810469"
+     inkscape:cx="49.561563"
+     inkscape:cy="30.762349"
+     inkscape:window-width="1996"
+     inkscape:window-height="1224"
+     inkscape:window-x="1512"
+     inkscape:window-y="601"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid1"
+       units="mm"
+       originx="0"
+       originy="0"
+       spacingx="0.99999997"
+       spacingy="0.99999997"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1">
+    <rect
+       x="4.0589211"
+       y="4.6998034"
+       width="115.99969"
+       height="73.701462"
+       id="rect4" />
+    <rect
+       x="8.7613293"
+       y="5.4380665"
+       width="45.468278"
+       height="49.39577"
+       id="rect3" />
+    <rect
+       x="76.586103"
+       y="15.70997"
+       width="53.323263"
+       height="55.589124"
+       id="rect2" />
+  </defs>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text2"
+       style="font-style:normal;font-variant:normal;font-weight:200;font-stretch:normal;font-size:26.6667px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans Ultra-Light';text-align:start;letter-spacing:0.09px;word-spacing:1.47px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect2);display:inline;fill:#66ff00;fill-opacity:0;stroke:#000000;stroke-width:3.02362;stroke-dasharray:7.69512, 7.69512, 15.3902, 15.3902;stroke-dashoffset:38.0908;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:37.3333px;font-family:FontAwesome;-inkscape-font-specification:FontAwesome;text-align:start;letter-spacing:0.09px;word-spacing:1.47px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect3);display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0151181;stroke-dasharray:none;stroke-dashoffset:16.6413;stroke-opacity:1"><tspan
+         x="8.7617188"
+         y="91.50062"
+         id="tspan2"><tspan
+           dx="0 20.757307 12.842649 20.944016 13.477322 20.309269 19.749294 13.477322 23.071987 12.842648 20.944012 21.05595 9.6319695 22.959972"
+           id="tspan1">Tfatexthfaeigh</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.31389301,0,0,0.27323241,0.69784761,-3.0314903)"
+       id="text4"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:64px;font-family:'Noto Serif';-inkscape-font-specification:'Noto Serif';text-align:start;letter-spacing:0.09px;word-spacing:1.47px;writing-mode:lr-tb;direction:ltr;white-space:pre;shape-inside:url(#rect4);display:inline;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.0151181;stroke-dasharray:none;stroke-dashoffset:16.6413;stroke-opacity:1"><tspan
+         x="4.0585938"
+         y="62.93123"
+         id="tspan3">T</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:'Noto Serif';-inkscape-font-specification:'Noto Serif';text-align:start;letter-spacing:0.0238125px;word-spacing:0.388938px;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.004;stroke-dasharray:none;stroke-dashoffset:16.6413;stroke-opacity:1"
+       x="13.960997"
+       y="10.965318"
+       id="text5"><tspan
+         sodipodi:role="line"
+         id="tspan5"
+         style="stroke-width:0.004"></tspan></text>
+  </g>
+</svg>

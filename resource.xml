@@ -1,0 +1,69 @@
+<gresources>
+  <gresource prefix="/org/SolveCad/SolveCad/">
+    
+    <file compressed="true">window.ui</file>
+    <file>window.css</file>
+    <file>canvas/shaders/background-vertex.glsl</file>
+    <file>canvas/shaders/background-fragment.glsl</file>
+    <file>canvas/shaders/selection-vertex.glsl</file>
+    <file>canvas/shaders/selection-fragment.glsl</file>
+    <file>canvas/shaders/face-vertex.glsl</file>
+    <file>canvas/shaders/face-fragment.glsl</file>
+    <file>canvas/shaders/glyph-3d-vertex.glsl</file>
+    <file>canvas/shaders/glyph-3d-geometry.glsl</file>
+    <file>canvas/shaders/glyph-vertex.glsl</file>
+    <file>canvas/shaders/glyph-fragment.glsl</file>
+    <file>canvas/shaders/glyph-geometry.glsl</file>
+    <file>canvas/shaders/icon-vertex.glsl</file>
+    <file>canvas/shaders/icon-fragment.glsl</file>
+    <file>canvas/shaders/icon-geometry.glsl</file>
+    <file>canvas/shaders/line-vertex.glsl</file>
+    <file>canvas/shaders/line-fragment.glsl</file>
+    <file>canvas/shaders/line-geometry.glsl</file>
+    <file>canvas/shaders/picture-vertex.glsl</file>
+    <file>canvas/shaders/picture-fragment.glsl</file>
+    <file>canvas/shaders/selection-texture-vertex.glsl</file>
+    <file>canvas/shaders/selection-texture-fragment.glsl</file>
+    <file>canvas/shaders/ubo.glsl</file>
+    <file>canvas/icon_texture_atlas.png</file>
+
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-contour-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-circle-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-spline-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-point-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-arc-symbolic.svg</file>    
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-rectangle-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-polygon-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-text-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-picture-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-set-construction-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-set-filet-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-set-intersection-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-workplane-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-sketch-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-draw-sketch3d-symbolic.svg</file>
+
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-coincident-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-dimension-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-parallel-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-tangent-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-equal-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-symetric-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-vertical-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-horizontal-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-normal-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-angle-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-ref-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-sameway-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-costrain-complementaryangle-symbolic.svg</file>
+
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-3d-extrude-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-3d-lathe-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-3d-loft-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-3d-circularcopy-symbolic.svg</file>
+    <file preprocess="xml-stripblanks">icons/scalable/actions/action-3d-linearcopy-symbolic.svg</file>
+
+
+    <file preprocess="xml-stripblanks">icons/scalable/apps/dune3d.svg</file>
+  </gresource>
+</gresources>

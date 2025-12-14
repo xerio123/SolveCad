@@ -98,8 +98,7 @@ void MyWindow::create()
   start = clock();
   dune3d::Canvas::VertexRef tmp;
   dune3d::SelectableRef select;
-  dune3d::SelectableRef2 select2;
-  glwin->select_table_counter =0;
+
   for(i=0;i<1000;i++){
 
     for(e=0;e<1000;e++){
@@ -107,13 +106,15 @@ void MyWindow::create()
       b.x = b.x +15;
       c.x = c.x +15;
       d.x = d.x +15;
+      
+      
       //glwin->draw_line(a,b);
 
-      //glwin->draw_line(b,c);
+      glwin->draw_line(b,c);
 
-      //glwin->draw_line(c,d);
+      glwin->draw_line(c,d);
 
-      //glwin->draw_line(d,a);
+      glwin->draw_line(d,a);
 
       
       tmp = glwin->draw_line(a,b);

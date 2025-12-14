@@ -87,6 +87,6 @@
         "any": "cpp",
         "*.lxx": "cpp"
     },
-    "C_Cpp.default.compileCommands": "/home/bertha/Documents/SolveCad/builddir/compile_commands.json",
+    "C_Cpp.default.compileCommands": "/home/mirsifique/Documents/SolveCad/builddir/compile_commands.json",
     "C_Cpp.default.configurationProvider": "mesonbuild.mesonbuild"
 }

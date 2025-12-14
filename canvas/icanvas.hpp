@@ -21,9 +21,7 @@ public:
         VertexType type;
         size_t index;
         unsigned int chunk;
-        size_t selectable_index;
 
-        
         friend auto operator<=>(const VertexRef &, const VertexRef &) = default;
         friend bool operator==(const VertexRef &, const VertexRef &) = default;
     };
@@ -53,7 +51,7 @@ public:
     virtual VertexRef draw_picture(const std::array<glm::vec3, 4> &corners,
                                    std::shared_ptr<const PictureData> data) = 0;
 
-    virtual void add_selectable( const SelectableRef &sref) = 0;
+    virtual void add_selectable(const VertexRef &vref, const SelectableRef &sref) = 0;
     virtual void set_selection_invisible(bool selection_invisible) = 0;
 
     virtual void save() = 0;

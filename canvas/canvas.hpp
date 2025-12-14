@@ -22,7 +22,9 @@
 #include "chunk.hpp"
 #include <glm/glm.hpp>
 #include <filesystem>
-
+#include <ankerl/unordered_dense.h>
+#include <absl/container/flat_hash_map.h>
+#include <absl/container/internal/common.h>
 
 namespace dune3d {
 
@@ -43,8 +45,7 @@ public:
     friend BoxSelection;
     friend SelectionTextureRenderer;
     Canvas();
-    SelectableRef2 select_table[10000000];
-    long select_table_counter;
+
     void request_push();
     void queue_pick(const std::filesystem::path &pick_path);
 
@@ -56,8 +57,7 @@ public:
     std::vector<VertexRef> draw_bitmap_text(glm::vec3 p, float size, const std::string &rtext) override;
     std::vector<VertexRef> draw_bitmap_text_3d(glm::vec3 p, const glm::quat &norm, float size,
                                                const std::string &rtext) override;
-    void add_selectable(const SelectableRef &sref) override;
-    void add_selectable2(const SelectableRef2 &sref);
+    void add_selectable(const VertexRef &vref, const SelectableRef &sref) override;
     void set_vertex_inactive(bool inactive) override
     {
         m_state.vertex_inactive = inactive;
@@ -402,32 +402,36 @@ private:
     void clear_flags(VertexFlags flags);
 
     void add_faces(const face::Faces &faces);
-/*
 
-    // Define a custom hash function for the Point
-struct Hasher {
-    size_t operator()(const VertexRef& p) const
-    {
-        // Combine hashes of x and y using the bitwise XOR
-        return  (std::hash<int>()(p.index));
-    }
-};
-
-struct Hasher2 {
-    size_t operator()(const SelectableRef& p) const
-    {
-        // Combine hashes of x and y using the bitwise XOR
-        return std::hash<int>()(p.point) ;
-    }
-};
-
-    std::unordered_map<VertexRef, SelectableRef, Hasher> m_selectable_table;
-    std::unordered_map<SelectableRef, std::vector<VertexRef>, Hasher2> m_vertex_ref_table;
-*/
-    std::vector<SelectableRef>m_selectable_table;
-    std::vector<VertexRef>m_vertex_ref_table;
+    struct hasher1 {
+        
+        std::size_t operator()(const VertexRef& p) const
+        {
+            // Combine hashes of x and y using the bitwise XOR
+            return std::hash<size_t>()(p.index);
+        }
+    };
+    struct hasher2 {
+        
+        std::size_t operator()(const SelectableRef& p) const
+        {
+            // Combine hashes of x and y using the bitwise XOR
+            return std::hash<unsigned int>()(p.point);
+        }
+    };
 
 
+
+
+    //auto operator()(id const& x) const noexcept -> uint64_t {
+    //    return ankerl::unordered_dense::detail::wyhash::hash(x.value);
+    //}
+
+
+    std::unordered_map<VertexRef, SelectableRef, hasher1> m_vertex_to_selectable_map;
+    std::unordered_map<SelectableRef, std::vector<VertexRef>, hasher2> m_selectable_to_vertex_map;
+
+    
 
     VertexFlags &get_vertex_flags(const VertexRef &vref);
 

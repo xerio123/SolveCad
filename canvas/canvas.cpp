@@ -673,7 +673,6 @@ void Canvas::animate_to_center_abs(const glm::vec3 &center)
 
 Canvas::VertexRef Canvas::get_vertex_ref_for_pick(unsigned int pick) const
 {
-    //ICI
     for (const auto &[key, it] : m_vertex_type_picks) {
         if ((pick >= it.offset) && ((pick - it.offset) < it.count))
             return {key.first, pick - it.offset, key.second};
@@ -683,9 +682,8 @@ Canvas::VertexRef Canvas::get_vertex_ref_for_pick(unsigned int pick) const
 
 std::optional<SelectableRef> Canvas::get_selectable_ref_for_vertex_ref(const VertexRef &vref) const
 {
-    //si vref.index (qui est un indice parmis tout les entite cree) existe dans le chunk
-    if (m_selectable_table.size()-1 >= vref.selectable_index) {
-        auto sr = m_selectable_table[ vref.selectable_index];
+    if (m_vertex_to_selectable_map.contains(vref)) {
+        auto sr = m_vertex_to_selectable_map.at(vref);
         if (!m_selection_filter || m_selection_filter->can_select(sr))
             return sr;
         else
@@ -723,7 +721,7 @@ unsigned int Canvas::get_hover_pick(const std::vector<pick_buf_t> &pick_buf) con
                 int py = m_last_y + dy;
                 if (px >= 0 && px < m_dev_width && py >= 0 && py < m_dev_height) {
                     if (auto p = read_pick_buf(pick_buf, px, py)) {
-                        if (any_of(get_vertex_ref_for_pick(p).type, VertexType::FACE_GROUP, VertexType::PICTURE)) //ne selectione pas les  face
+                        if (any_of(get_vertex_ref_for_pick(p).type, VertexType::FACE_GROUP, VertexType::PICTURE))
                             continue;
                         const auto d = glm::vec2(dx, dy).length();
                         if (d <= best_distance) {
@@ -754,9 +752,9 @@ void Canvas::update_hover_selection()
         m_hover_selection.reset();
         auto pick = get_hover_pick();
 
-        if (auto sr = get_selectable_ref_for_pick(pick))//il prend les selectable ici
+        if (auto sr = get_selectable_ref_for_pick(pick))
             m_hover_selection = *sr;
-        //m_selectable_table
+
 
         if (m_hover_selection != last_hover_selection) {
             auto mask = VertexFlags::HOVER;
@@ -765,11 +763,10 @@ void Canvas::update_hover_selection()
             }
             clear_flags(mask);
             if (m_hover_selection.has_value()) {
-                /*for (const auto &vref : m_hover_selection.value().ref_table ) {
+                for (const auto &vref : m_selectable_to_vertex_map.at(m_hover_selection.value())) {
                     auto &flags = get_vertex_flags(vref);
                     flags |= mask;
                 }
-                */
             }
             m_push_flags =
                     static_cast<PushFlags>(m_push_flags | PF_LINES | PF_GLYPHS | PF_GLYPHS_3D | PF_ICONS | PF_PICTURES);
@@ -1381,11 +1378,8 @@ void Canvas::clear()
     for (auto &chunk : m_chunks) {
         chunk.clear();
     }
-    //m_selectable_to_vertex_map.clear();
-    //m_vertex_to_selectable_map.clear();
-
-    m_selectable_table.clear();
-    m_vertex_ref_table.clear();
+    m_selectable_to_vertex_map.clear();
+    m_vertex_to_selectable_map.clear();
     m_vertex_type_picks.clear();
     m_push_flags = PF_ALL;
     queue_draw();
@@ -1400,7 +1394,17 @@ void Canvas::clear_chunks(unsigned int first_chunk)
         chunk_id++;
     }
 
-
+    for (auto it = m_vertex_to_selectable_map.cbegin(); it != m_vertex_to_selectable_map.cend() /* not hoisted */;
+         /* no increment */) {
+        if (it->first.chunk >= first_chunk) {
+            m_selectable_to_vertex_map.erase(it->second);
+            auto copy_it = it;
+            m_vertex_to_selectable_map.erase(copy_it);
+        }
+        else {
+            ++it;
+        }
+    }
 
     m_vertex_type_picks.clear();
     m_push_flags = PF_ALL;
@@ -1416,19 +1420,14 @@ ICanvas::VertexRef Canvas::draw_line(glm::vec3 a, glm::vec3 b)
 {
     auto &lines = m_state.selection_invisible ? m_current_chunk->m_lines_selection_invisible : m_current_chunk->m_lines;
     //auto &li = lines.emplace_back(transform_point(a), transform_point(b));
-    //bordel on transforme pas les lignes comme ca sinon on est 5X plus lent!!
-    //index devient un index general par chunk
+    //bordel on transforme pas les lignes comme ca sinon on est plus lent!! 800 milli sur 1 000 000 de lignes
     auto &li = lines.emplace_back(a, b);
     apply_flags(li.flags);
     apply_line_flags(li.flags);
 
     if (m_state.selection_invisible)
         return {VertexType::SELECTION_INVISIBLE, 0};
-    //m_current_chunk->m_element_number ++; //INCREMENTATION DE LA REFERENCE POUR SELECTION
-    
-    m_current_chunk->m_lines.back().ref = {VertexType::LINE, m_current_chunk->m_lines.size()-1, m_current_chunk_id};
-    
-    return m_current_chunk->m_lines.back().ref;
+    return {VertexType::LINE, m_current_chunk->m_lines.size() - 1, m_current_chunk_id};
 }
 
 ICanvas::VertexRef Canvas::draw_screen_line(glm::vec3 a, glm::vec3 b)
@@ -1556,8 +1555,7 @@ std::vector<ICanvas::VertexRef> Canvas::draw_bitmap_text_3d(glm::vec3 p, const g
 
 ICanvas::VertexRef Canvas::draw_icon(IconTexture::IconTextureID id, glm::vec3 origin, glm::vec2 shift, glm::vec3 v)
 {
-    //fuck off
-    //origin = transform_point(origin);
+    origin = transform_point(origin);
     auto &icons = m_state.selection_invisible ? m_current_chunk->m_icons_selection_invisible : m_current_chunk->m_icons;
     auto icon_pos = IconTexture::icon_texture_map.at(id);
     auto &icon =
@@ -1565,8 +1563,7 @@ ICanvas::VertexRef Canvas::draw_icon(IconTexture::IconTextureID id, glm::vec3 or
     apply_flags(icon.flags);
     if (m_state.selection_invisible)
         return {VertexType::SELECTION_INVISIBLE, 0};
-    //m_current_chunk->m_element_number ++; //INCREMENTATION DE LA REFERENCE POUR SELECTION
-    return {VertexType::ICON, m_current_chunk->m_icons.size()-1 , m_current_chunk_id};
+    return {VertexType::ICON, m_current_chunk->m_icons.size() - 1, m_current_chunk_id};
 }
 
 
@@ -1590,74 +1587,17 @@ ICanvas::VertexRef Canvas::draw_picture(const std::array<glm::vec3, 4> &corners,
     return {VertexType::PICTURE, m_current_chunk->m_pictures.size() - 1, m_current_chunk_id};
 }
 
-
-void Canvas::add_selectable(const SelectableRef &sref)
+//hum
+void Canvas::add_selectable(const VertexRef &vref, const SelectableRef &sref)
 {
-
-/*
-    //if (vref.type == VertexType::SELECTION_INVISIBLE)
-      //  return;
-
-    
+    if (vref.type == VertexType::SELECTION_INVISIBLE)
+        return;
     SelectableRef sr = sref;
     if (m_override_selectable.has_value())
         sr = m_override_selectable.value();
-    
-    //m_current_chunk->m_current_index should be equal to m_selectable_table.size-1
-    //TO DO if we put an line not selectionable ?? and few ref for one selectionnable
-    
-    
-
-    
-    for(VertexRef &Vref: sr.ref_table){
-        if(Vref.type == VertexType::SELECTION_INVISIBLE)
-            continue;
-        if(Vref.type == VertexType::LINE)
-            m_current_chunk->m_lines[ Vref.index].ref = &Vref; //lie le vector ref au ligne etc...
-        
-        Vref.selectable_index = m_selectable_table.size(); //lie le vector ref au selectable
-        
-        //m_vertex_ref_table.push_back( Vref);
-
-    }
-    m_selectable_table.push_back(sr); //une copy ?
-
-
-    
-    //m_vertex_to_selectable_map.emplace(vref, sr);
-    //m_selectable_to_vertex_map[sr].push_back(vref);
-
-
-
-*/
+    m_vertex_to_selectable_map.emplace(vref, sr);
+    m_selectable_to_vertex_map[sr].push_back(vref);
 }
-
-
-void Canvas::add_selectable2(const SelectableRef2 &sref)
-{
-    //if (vref.type == VertexType::SELECTION_INVISIBLE)
-      //  return;
-    //SelectableRef sr = sref;
-    //if (m_override_selectable.has_value())
-     //   sr = m_override_selectable.value();
-    
-    //m_current_chunk->m_current_index should be equal to m_selectable_table.size-1
-    //TO DO if we put an line not selectionable ?? and few ref for one selectionnable
-    
-    
-    
-    
-
-    
-    
-    select_table[select_table_counter].item= sref.item; //une copy ?
-    select_table[select_table_counter].point= sref.point;
-    //select_table[select_table_counter].type = sref.type; 
-    select_table[select_table_counter].item= sref.item; 
-    //m_vertex_to_selectable_map.emplace(vref, sr);
-    //m_selectable_to_vertex_map[sr].push_back(vref);
-}
-
 
 Canvas::VertexFlags &Canvas::get_vertex_flags(const VertexRef &vref)
 {
@@ -1680,17 +1620,14 @@ void Canvas::set_flag_for_selectables(const std::set<SelectableRef> &sel, Vertex
 {
     clear_flags(flag);
     for (auto &sr : sel) {
-        //if (!m_selectable_to_vertex_map.contains(sr) )
-        //    continue;
-        /*
-        auto &vrefs = sr.ref_table;
+        if (!m_selectable_to_vertex_map.contains(sr))
+            continue;
+        auto &vrefs = m_selectable_to_vertex_map.at(sr);
         for (const auto &vref : vrefs) {
             auto &flags = get_vertex_flags(vref);
             flags |= flag;
         }
         // auto &flags = get_vertex_flags()
-
-        */
     }
     m_push_flags = static_cast<PushFlags>(m_push_flags | PF_LINES | PF_GLYPHS | PF_GLYPHS_3D | PF_ICONS | PF_PICTURES);
     queue_draw();
@@ -1700,15 +1637,13 @@ void Canvas::set_hover_selection(const std::optional<SelectableRef> &sr)
 {
     if (!sr.has_value())
         return;
-    //if (!m_selectable_table.size< sr-> .contains(*sr))
-    //    return;
-    /*
-    auto &vrefs = sr->ref_table;
+    if (!m_selectable_to_vertex_map.contains(*sr))
+        return;
+    auto &vrefs = m_selectable_to_vertex_map.at(*sr);
     for (const auto &vref : vrefs) {
         auto &flags = get_vertex_flags(vref);
         flags |= VertexFlags::HOVER;
     }
-    */
 }
 
 std::set<SelectableRef> Canvas::get_selection() const
@@ -1716,16 +1651,6 @@ std::set<SelectableRef> Canvas::get_selection() const
     std::set<SelectableRef> r;
     unsigned int chunk_id = 0;
     for (auto &chunk : m_chunks) {
-
-
-        for (size_t i = 0; i < chunk.m_lines.size(); i++) {
-            if ((chunk.m_lines.at(i).flags & VertexFlags::SELECTED) != VertexFlags::DEFAULT) {
-
-            }
-        }
-
-/*
-
         for (size_t i = 0; i < chunk.m_lines.size(); i++) {
             if ((chunk.m_lines.at(i).flags & VertexFlags::SELECTED) != VertexFlags::DEFAULT) {
                 const VertexRef vref{.type = VertexType::LINE, .index = i, .chunk = chunk_id};
@@ -1768,9 +1693,6 @@ std::set<SelectableRef> Canvas::get_selection() const
                     r.insert(m_vertex_to_selectable_map.at(vref));
             }
         }
-
-*/
-
         chunk_id++;
     }
     return r;

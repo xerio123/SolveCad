@@ -5,7 +5,6 @@
 #include <glm/glm.hpp>
 #include "vertex_flags.hpp"
 #include <array>
-#include "icanvas.hpp"
 
 namespace dune3d {
 class CanvasChunk {
@@ -41,7 +40,6 @@ public:
 
     size_t m_face_offset = 0;
     size_t m_index_offset = 0;
-    //size_t m_element_number = 0;
 
     class FaceGroup {
     public:
@@ -71,8 +69,7 @@ public:
         float x2;
         float y2;
         float z2;
-        ICanvas::VertexRef ref;
-        size_t selectable_index;
+
         VertexFlags flags = VertexFlags::DEFAULT;
     };
 

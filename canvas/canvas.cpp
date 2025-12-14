@@ -1628,6 +1628,8 @@ void Canvas::set_flag_for_selectables(const std::set<SelectableRef> &sel, Vertex
             flags |= flag;
         }
         // auto &flags = get_vertex_flags()
+        //ICI un test
+        
     }
     m_push_flags = static_cast<PushFlags>(m_push_flags | PF_LINES | PF_GLYPHS | PF_GLYPHS_3D | PF_ICONS | PF_PICTURES);
     queue_draw();
